@@ -15,3 +15,11 @@ test('destructuring', () => {
     expect(b()).toBe('b')
     //c is not available here
 });
+
+test('untyped map', () => {
+    const myMap = new Map();
+    myMap.set(1,1)
+    myMap.set("eins",1)
+    expect(myMap.get(1)).toBe(1)
+    expect(myMap.get("eins")).toBe(1)
+})
