@@ -9,7 +9,11 @@ test('basic', () => {
 });
 
 test('destructuring', () => {
-    const response = {a: 'a', b: () => {return 'b'}, c: 34}
+    const response = {
+        a: 'a', b: () => {
+            return 'b'
+        }, c: 34
+    }
     const {a, b} = response;
     expect(a).toBe('a')
     expect(b()).toBe('b')
@@ -18,8 +22,8 @@ test('destructuring', () => {
 
 test('untyped map', () => {
     const myMap = new Map();
-    myMap.set(1,1)
-    myMap.set("eins",1)
+    myMap.set(1, 1)
+    myMap.set("eins", 1)
     expect(myMap.get(1)).toBe(1)
     expect(myMap.get("eins")).toBe(1)
 })
