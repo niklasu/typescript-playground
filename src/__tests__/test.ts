@@ -43,4 +43,10 @@ test('list groupingBy field (std lib does not provide an easier solution)', () =
     r[a.key] = [...r[a.key] || [], a]
     return r
   }, {})
+
+  expect(grouped).toHaveLength(2)
+  expect(grouped[1]).toContain({key: 1, value: 'first1'})
+  expect(grouped[1]).toContain({key: 1, value: 'first2'})
+  expect(grouped[2]).toContain({key: 2, value: 'second1'})
+  expect(grouped[2]).toContain({key: 2, value: 'second2'})
 })
