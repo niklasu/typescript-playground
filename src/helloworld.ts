@@ -1,7 +1,7 @@
-let message: string = 'Hello World!';
-console.log(message);
+import { Logger } from "tslog";
 
-console.log("Ich mag TypeSscript :-)")
-
-let a = 2
-console.log(`Juhuu, endlich keine Semikolons mehr :-). a = ${a}`)
+const log: Logger = new Logger();
+log.info("I am a info log.");
+log.error("I am a error log.");
+log.fatal("I am a fatal log.");
+log.debug("I am a silly log.");
