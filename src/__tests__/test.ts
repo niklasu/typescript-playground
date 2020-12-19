@@ -38,6 +38,12 @@ it('typed map', () => {
 
 });
 
+it('filter array', () => {
+  const values = [1, 2, 3, 4, 5, 6, 7]
+  const filtered = values.filter(item => item > 3);
+  expect(filtered).toEqual([4, 5, 6, 7])
+});
+
 test('merge objects', () => {
   const firstObject = {a: 1}
   const secondObjecet = {b: 2}
