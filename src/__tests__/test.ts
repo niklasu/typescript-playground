@@ -44,6 +44,13 @@ it('filter array', () => {
   expect(filtered).toEqual([4, 5, 6, 7])
 });
 
+it('map array', () => {
+  const values = [1, 2, 3];
+  const quadrized = values.map(item => item * item);
+  expect(quadrized).toEqual([1,4,9])
+
+});
+
 test('merge objects', () => {
   const firstObject = {a: 1}
   const secondObjecet = {b: 2}
