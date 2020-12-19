@@ -28,11 +28,21 @@ test('untyped map', () => {
   expect(myMap.get("eins")).toBe(1)
 })
 
+it('typed map', () => {
+  const stringIntMap: Record<string, number> = {}
+  stringIntMap["niklas"] = 20
+  stringIntMap["bernd"] = 25
+
+  expect(stringIntMap["niklas"]).toBe(20)
+  expect(stringIntMap["bernd"]).toBe(25)
+
+});
+
 test('merge objects', () => {
-  const firstObject = {a : 1}
-  const secondObjecet = {b : 2}
+  const firstObject = {a: 1}
+  const secondObjecet = {b: 2}
   const merged = {...firstObject, ...secondObjecet, c: 3}
-  expect(merged).toEqual({a: 1, b:2, c: 3})
+  expect(merged).toEqual({a: 1, b: 2, c: 3})
 })
 
 class MyType {
