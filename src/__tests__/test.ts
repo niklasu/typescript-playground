@@ -28,6 +28,13 @@ test('untyped map', () => {
   expect(myMap.get("eins")).toBe(1)
 })
 
+test('merge objects', () => {
+  const firstObject = {a : 1}
+  const secondObjecet = {b : 2}
+  const merged = {...firstObject, ...secondObjecet, c: 3}
+  expect(merged).toEqual({a: 1, b:2, c: 3})
+})
+
 class MyType {
   key: number
   value: string
