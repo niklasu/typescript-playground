@@ -3,7 +3,7 @@ test('Boolean', () => {
   expect(myBool).toBeTruthy()
 });
 
-test('basic', () => {
+test('basic test', () => {
   let a = 1
   expect(a).toBe(1);
 });
